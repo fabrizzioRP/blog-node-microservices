@@ -6,4 +6,4 @@ spec:
   containers:
     - name: posts
       image: fabri7/posts:0.0.1
-      imagePullPolicy: Never:
+      imagePullPolicy: Never
