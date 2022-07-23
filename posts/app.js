@@ -25,7 +25,7 @@ app.post('/posts', async (req, res) => {
     posts[id] = data;
 
     // Enviamos Datos a nuestro EVENTBUS
-    await axios.post('http://localhost:4005/events', {
+    await axios.post('http://event-bus-srv:4005/events', {
         type: 'PostCreated',
         data,
     }).catch( (err) => { console.log( err.message ); });
