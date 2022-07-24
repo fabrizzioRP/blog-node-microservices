@@ -14,8 +14,8 @@ spec:
     spec:
      containers:
        - name: event-bus
-         image: fabri7/event-bus:latest
-         imagePullPolicy: Always
+         image: fabri7/event-bus
+         # imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service

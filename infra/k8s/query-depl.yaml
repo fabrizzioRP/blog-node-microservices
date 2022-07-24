@@ -14,8 +14,8 @@ spec:
     spec:
       containers: 
         - name: query
-          image: fabri7/query:latest
-          imagePullPolicy: Always
+          image: fabri7/query
+          #imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service

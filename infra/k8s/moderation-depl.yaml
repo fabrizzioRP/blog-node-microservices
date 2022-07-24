@@ -14,8 +14,8 @@ spec:
     spec:
       containers: 
         - name: moderation
-          image: fabri7/moderation:latest
-          imagePullPolicy: Always
+          image: fabri7/moderation
+          # imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service

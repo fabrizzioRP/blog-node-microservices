@@ -1,0 +1,60 @@
+apiVersion: skaffold/v2beta29 # skaffold/v2alpha3
+kind: Config
+metadata:
+  name: skaffold-demo
+build:
+  local:
+    push: false
+  artifacts:
+    - image:  fabri7/client
+      context:  client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.js"
+            dest: .
+    - image:  fabri7/posts
+      context:  posts
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "*.js"
+            dest: .
+    - image:  fabri7/comments
+      context:  comments
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "*.js"
+            dest: .
+    - image:  fabri7/event-bus
+      context:  event-bus
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "*.js"
+            dest: .
+    - image:  fabri7/moderation
+      context:  moderation
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "*.js"
+            dest: .
+    - image:  fabri7/query
+      context:  query
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "*.js"
+            dest: .  
+deploy:
+  kubectl:
+    manifests:
+      - "./infra/k8s/*"

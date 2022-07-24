@@ -14,8 +14,8 @@ spec:
     spec:
       containers: 
         - name: comments
-          image: fabri7/comments:latest
-          imagePullPolicy: Always
+          image: fabri7/comments
+          # imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service

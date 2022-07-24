@@ -30,5 +30,6 @@ app.post('/events', async (req, res) => {
 });
 
 app.listen( port, () => {
+    console.log("fine");
     console.log("Server runninf on port: ", port);
 });

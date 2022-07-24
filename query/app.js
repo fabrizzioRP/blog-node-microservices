@@ -55,6 +55,7 @@ app.post('/events', ( req, res ) => {
 });
 
 app.listen( port, async () => {
+    console.log("fine");
     console.log("Server running on port : ", port);
 
     const resp = await axios.get("http://event-bus-srv:4005/events")

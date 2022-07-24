@@ -36,5 +36,6 @@ app.get('/events', ( req, res ) => {
 });
 
 app.listen( port, () => {
+    console.log("fine");
     console.log("Server Running on port : ", port);
 });
